@@ -1,0 +1,179 @@
+.trip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+
+  &__container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    opacity: 0.7;
+  }
+
+  &__details {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 30%;
+    background: black;
+    opacity: 0.7;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  &__location {
+    position: relative;
+    left: 27px;
+    margin-top: 10px;
+  }
+
+  &__location-box {
+    position: relative;
+  }
+
+  &__location-image {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+  }
+
+  &__link {
+    color: white;
+    margin-left: 10px;
+  }
+
+  &__prev-button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: #000;
+    opacity: 0.6;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__next-button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background-color: #000;
+    opacity: 0.6;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__flight-button {
+    width: 200px;
+    height: 60px;
+    border: none;
+    position: absolute;
+    bottom: 10%;
+    left: calc(50% - 100px);
+    background-color: #000;
+    opacity: 0.6;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .trip__prev-button {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 5%;
+  }
+
+  .trip__next-button {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 5%;
+  }
+
+  .trip__flight-button {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 5%;
+    left: calc(50% - 80px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .trip {
+    &__title {
+      font-size: 18px;
+      opacity: unset;
+    }
+  
+    &__details {
+      font-size: 12px;
+      width: 85%;
+      bottom: 10%;
+      top: unset;
+      overflow-x: scroll;
+      max-height: 70px;
+      opacity: unset;
+    }
+
+    &__prev-button {
+      width: 100px;
+      height: 26px;
+      font-size: 14px;
+      bottom: 5%;
+      left: 5%;
+      opacity: unset;
+    }
+  
+    &__next-button {
+      width: 100px;
+      height: 26px;
+      font-size: 14px;
+      bottom: 5%;
+      right: 5%;
+      opacity: unset;
+    }
+  
+    &__flight-button {
+      width: 100px;
+      height: 26px;
+      font-size: 14px;
+      bottom: 5%;
+      left: calc(50% - 50px);
+      opacity: unset;
+    }
+  }
+}
